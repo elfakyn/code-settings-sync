@@ -457,7 +457,7 @@ export default class Commons {
     outputChannel.appendLine(`Version: ${Environment.getVersion()}`);
     outputChannel.appendLine(`--------------------`);
     outputChannel.appendLine(
-      `GitHub Token: ${syncSettings.customConfig.token || "Anonymous"}`
+      `GitHub Token: ${syncSettings.customConfig.token ? syncSettings.customConfig.token.substring(0,8).concat("...") : "Anonymous"}`
     );
     outputChannel.appendLine(`GitHub Gist: ${syncSettings.extConfig.gist}`);
     outputChannel.appendLine(
